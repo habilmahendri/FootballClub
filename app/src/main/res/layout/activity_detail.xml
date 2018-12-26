@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".ui.detailMatch.DetailActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/tvScoreDetail"
+        android:layout_toStartOf="@id/tvScoreDetail"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgHome"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            tools:src="@drawable/picture" />
+
+        <TextView
+            android:id="@+id/tvAwayTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            tools:text="liverpool" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tvScoreDetail"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgAway"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            tools:src="@drawable/picture" />
+
+        <TextView
+            android:id="@+id/tvHomeTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            tools:text="Southampton" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvScoreDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:textSize="25sp"
+        tools:text="3 vs 0" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/linear"
+        android:layout_marginTop="10dp"
+        android:background="#689f9f9f" />
+
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view">
+
+
+        <TextView
+            android:id="@+id/goals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="@string/goals"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvGoalsAway"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@id/goals"
+            android:gravity="end"
+            android:textSize="13sp"
+            tools:text="27':Heung-Min Son;36':Dele Alli;42':Harry Kane;49':Christian Eriksen;61':Heung-Min Son;74':Harry Kane;" />
+
+        <TextView
+            android:id="@+id/tvGoalsHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/goals"
+            android:textSize="13sp"
+            tools:text="27':Heung-Min Son;36':Dele Alli;42':Harry Kane;49':Christian Eriksen;61':Heung-Min Son;74':Harry Kane;" />
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@id/relative"
+        android:id="@+id/viewShot"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#689f9f9f" />
+
+
+</RelativeLayout>
